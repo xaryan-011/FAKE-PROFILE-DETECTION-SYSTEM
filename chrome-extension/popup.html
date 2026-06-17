@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShieldAI - Fake Profile Detector</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <div class="popup-header">
+      <div class="popup-logo">&#128737;</div>
+      <div>
+        <div class="popup-title">ShieldAI</div>
+        <div class="popup-subtitle">Fake Profile Detector</div>
+      </div>
+      <div id="connection-status" class="connection-dot offline" title="Backend status"></div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="popup-tabs">
+      <button class="popup-tab active" data-tab="auto">🔍 Auto Scan</button>
+      <button class="popup-tab" data-tab="manual">✏️ Manual Entry</button>
+    </div>
+
+    <!-- Auto Scan Tab -->
+    <div id="tab-auto" class="tab-content active">
+      <div id="status" class="popup-status">
+        Navigate to an Instagram profile, then click "Scan Profile"
+      </div>
+
+      <button id="scan-btn" class="popup-btn">
+        &#128269; Scan Profile
+      </button>
+    </div>
+
+    <!-- Manual Entry Tab -->
+    <div id="tab-manual" class="tab-content">
+      <form id="manual-form" class="manual-form">
+        <div class="manual-field">
+          <label>Username</label>
+          <input type="text" id="m-username" placeholder="e.g. john_doe_123" required />
+        </div>
+        <div class="manual-field">
+          <label>Bio</label>
+          <input type="text" id="m-bio" placeholder="Profile bio text..." />
+        </div>
+        <div class="manual-row">
+          <div class="manual-field">
+            <label>Followers</label>
+            <input type="number" id="m-followers" placeholder="0" min="0" />
+          </div>
+          <div class="manual-field">
+            <label>Following</label>
+            <input type="number" id="m-following" placeholder="0" min="0" />
+          </div>
+        </div>
+        <div class="manual-row">
+          <div class="manual-field">
+            <label>Posts</label>
+            <input type="number" id="m-posts" placeholder="0" min="0" />
+          </div>
+          <div class="manual-field">
+            <label>Age (days)</label>
+            <input type="number" id="m-age" placeholder="365" min="1" />
+          </div>
+        </div>
+        <button type="submit" class="popup-btn">🛡️ Analyze Profile</button>
+      </form>
+    </div>
+
+    <!-- Results (shared between tabs) -->
+    <div id="result" class="popup-result" style="display: none;">
+      <div id="result-icon" class="result-icon"></div>
+      <div id="result-text" class="result-text"></div>
+      <div id="result-score" class="result-score"></div>
+      <div id="result-reasons" class="result-reasons"></div>
+    </div>
+
+    <div id="loading" class="popup-loading" style="display: none;">
+      <div class="popup-spinner"></div>
+      <div>Analyzing profile...</div>
+    </div>
+
+    <div class="popup-footer">
+      Powered by AI | v1.0.0
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

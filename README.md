@@ -13,5 +13,5 @@ This project demonstrates the application of Machine Learning in cybersecurity, 
 📝 User-friendly web interface
 📂 Upload profile details manually or via dataset
 📊 Data visualization dashboard
-📉 Performance metrics (Accuracy, Precision, Recall, F1-Score)
+📉 Performance metrics 
 🔒 Secure and lightweight application

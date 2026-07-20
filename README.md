@@ -15,3 +15,4 @@ This project demonstrates the application of Machine Learning in cybersecurity, 
 📊 Data visualization dashboard
 📉 Performance metrics 
 🔒 Secure and lightweight application
+ 
